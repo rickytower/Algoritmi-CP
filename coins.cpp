@@ -45,7 +45,7 @@ float solve(int x)
 	}
 	/* Recupero valore best per ottenere la somma x */
 	if (b[x - 1] != INFINITY) {
-		return b[x];
+		return b[x - 1];
 	}
 	float best = INFINITY;
  for (auto c:coins) {
