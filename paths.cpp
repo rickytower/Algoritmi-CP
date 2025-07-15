@@ -11,7 +11,7 @@ const int grid[5][5] = {
 	{6, 3, 9, 7, 8}
 };
 
-void printsum(int sum[5][5])
+void printsum(int sum[][5])
 {
 	for (int i = 0; i < 5; i++) {
 		for (int j = 0; j < 5; j++) {
@@ -31,28 +31,8 @@ int sum(int y, int x)
 	return max(sum(y, x - 1), sum(y - 1, x)) + grid[y][x];
 }
 
-int solve()
-{
-	int sum[5][5];
-	for (int y = 0; y < 5; y++) {
-		for (int x = 0; x < 5; x++) {
-			if (x == 0 || y == 0) {
-				sum[y][x] = grid[y][x];
-			} else {
-				sum[y][x] =
-				    max(sum[y][x - 1],
-					sum[y - 1][x]) + grid[y][x];
-			}
-		}
-
-		printsum(sum);
-	}
-	return sum[4][4];
-}
-
 int main()
 {
 	cout << sum(4, 4) << endl;
-	cout << solve() << endl;
 	return 0;
 }
