@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 #define ll long long
 #define lui long unsigned int
-#define INPUT "input-s.txt"
-#define OUTPUT "output-s.txt"
+#define INPUT "input.txt"
+#define OUTPUT "output.txt"
 using namespace std;
 
 /*soluzione*/
